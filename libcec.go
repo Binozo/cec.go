@@ -299,3 +299,7 @@ func (c *Connection) GetDeviceMenuLanguage(address int) string {
 	}
 	return resultString
 }
+
+func (c *Connection) ToggleMute() {
+	C.libcec_audio_toggle_mute(c.connection)
+}
